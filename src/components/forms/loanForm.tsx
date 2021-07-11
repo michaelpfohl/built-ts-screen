@@ -29,7 +29,7 @@ export function LoanForm() {
         placeholder="Interest"
         onChange={(e) => setInterest(e.target.value)}
       />
-      <button onClick={() => dispatch(createLoan(principal, term, interest))} type="button">
+      <button onClick={() => dispatch(createLoan(Number(principal), Number(term), Number(interest)))} type="button">
         Submit
       </button>
     </form>
