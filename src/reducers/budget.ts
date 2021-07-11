@@ -1,7 +1,7 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { Budget } from '../types/budget';
 
-const budgetReducer = (state = { budgets: [] }, action: PayloadAction<Budget>) => {
+const budgetReducer = (state = { budgets: [] }, action: PayloadAction<Budget>): any => {
     switch(action.type){
         case 'CREATE-BUDGET':
             return {

@@ -4,6 +4,9 @@ import './App.css';
 import { LoanForm } from './components/forms/loanForm';
 import { BudgetForm } from './components/forms/budgetForm';
 import { CollateralForm } from './components/forms/collateralForm';
+import LoanGrid from './components/grids/loanGrid';
+import BudgetGrid from './components/grids/budgetGrid';
+import CollateralGrid from './components/grids/collateralGrid';
 
 function App() {
   return (
@@ -22,8 +25,11 @@ function App() {
           Learn React
         </a>
         <LoanForm />
+        <LoanGrid />
         <BudgetForm />
+        <BudgetGrid/>
         <CollateralForm /> 
+        <CollateralGrid />
       </header>
     </div>
   );

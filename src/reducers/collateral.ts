@@ -1,7 +1,7 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { Collateral } from '../types/collateral';
 
-const collateralReducer = (state = { collateral: [] }, action: PayloadAction<Collateral>) => {
+const collateralReducer = (state = { collateral: [] }, action: PayloadAction<Collateral>): any => {
     switch(action.type){
         case 'CREATE-COLLATERAL':
             return {

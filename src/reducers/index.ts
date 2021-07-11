@@ -8,3 +8,5 @@ export const allReducers = combineReducers({
     budget: budgetReducer,
     collateral: collateralReducer,
 })
+
+export type AppState = ReturnType<typeof allReducers>;
