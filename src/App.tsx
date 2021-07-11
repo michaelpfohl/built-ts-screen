@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { LoanForm } from './components/forms/loanForm';
+import { BudgetForm } from './components/forms/budgetForm';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           Learn React
         </a>
         <LoanForm />
+        <BudgetForm />
       </header>
     </div>
   );
