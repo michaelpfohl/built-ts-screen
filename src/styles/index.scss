@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+body {
+  margin: 0;
+  font-family: Archivo, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #0C1733 !important;
+}
+
+input {
+  text-align: center;
+  height: 50px;
+}
+
+.input-full-border {
+  border: 2px solid #E13B25;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.input-no-left-border {
+  border: 2px solid #E13B25;
+  border-left: none;
+}
+
+.submit-button {
+  color: #FFFFFF;
+  background-color: #E13B25;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 50px;
+  padding: 0 15px;
+}
+
+.built-logo {
+  width: 400px;
+  margin-top: 5%;
+}
+
+.ag-theme-alpine {
+  width: 100%;
+  height: 300px;
+}
+
+.ag-theme-alpine .ag-root-wrapper {
+  border: 2px solid #E13B25 !important;
+  border-radius: 5px;
+}
+
+.ag-header-cell-label {
+  justify-content: center;
+}
+
+.form-header {
+  font-size: 50px;
+}
