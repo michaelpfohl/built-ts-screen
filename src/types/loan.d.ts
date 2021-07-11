@@ -1,7 +1,7 @@
 interface Loan {
-    principal: string;
-    interest: string;
-    term: string;
+    principal: number;
+    interest: number;
+    term: number;
 }
 
 export { Loan };

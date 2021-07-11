@@ -11,13 +11,13 @@ export function BudgetForm() {
     <form>
       <input
         type="text"
-        name="term"
+        name="projectName"
         placeholder="Project Name"
         onChange={(e) => setProjectName(e.target.value)}
       />
       <input
         type="text"
-        name="principal"
+        name="totalBudget"
         placeholder="Total Budget"
         onChange={(e) => setTotalBudget(e.target.value)}
       />

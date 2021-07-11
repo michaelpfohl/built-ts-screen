@@ -1,4 +1,4 @@
-export const createLoan = (principal: string, interest: string, term: string)  => {
+export const createLoan = (principal: number, interest: number, term: number)  => {
     return {
         type: "CREATE-LOAN",
         payload: {

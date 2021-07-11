@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { LoanForm } from './components/forms/loanForm';
 import { BudgetForm } from './components/forms/budgetForm';
+import { CollateralForm } from './components/forms/collateralForm';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         </a>
         <LoanForm />
         <BudgetForm />
+        <CollateralForm /> 
       </header>
     </div>
   );
