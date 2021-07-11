@@ -3,28 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { createStore } from 'redux';
-import { allReducers } from './reducers';
 import { Provider } from 'react-redux';
-
-//ACTION
-const createLoan = (principal: string, interest: string, term: string)  => {
-  return {
-      type: "CREATE",
-      payload: {
-          principal,
-          interest,
-          term
-      }
-  }
-}
-
-//STORE
-let store = createStore(allReducers, composeWithDevTools());
-
-//DISPATCH
-store.dispatch(createLoan("10000", "7", "12"));
+import { store } from './app/store';
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,9 +1,9 @@
 import { PayloadAction } from '@reduxjs/toolkit';
-import Loan from '../types/loan';
+import { Loan } from '../types/loan';
 
 const loanReducer = (state = { loans: [] }, action: PayloadAction<Loan>) => {
     switch(action.type){
-        case 'CREATE':
+        case 'CREATE-LOAN':
             return {
                 ...state,
                 loans: [...state.loans, action.payload],
