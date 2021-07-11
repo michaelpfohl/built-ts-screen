@@ -1,15 +1,16 @@
-import { AgGridColumn, AgGridReact } from 'ag-grid-react';
+import { AgGridReact } from 'ag-grid-react';
 import { useSelector } from 'react-redux';
 import { AppState } from '../../reducers';
 
 export default function BudgetGrid() {
   const budget = useSelector((state: AppState) => state.budget.budgets);
-  console.log(budget);
+  const columnDefs = [
+      { field: "projectName", headerName: "Project Name", editable: true},
+      { field: "totalBudget", headerName: "Total Budget", editable: true},
+  ]
   return (
     <div className="ag-theme-alpine">
-      <AgGridReact rowData={budget}>
-        <AgGridColumn field="projectName"></AgGridColumn>
-        <AgGridColumn field="totalBudget"></AgGridColumn>
+      <AgGridReact rowData={budget} columnDefs={columnDefs} immutableData>
       </AgGridReact>
     </div>
   );
