@@ -19,7 +19,6 @@ export default function CollateralGrid() {
         rowData={collateral}
         columnDefs={columnDefs}
         onCellValueChanged={onCellValueChanged}
-        immutableData
       ></AgGridReact>
     </div>
   );

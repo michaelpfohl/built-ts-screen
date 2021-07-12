@@ -11,7 +11,7 @@ export default function LoanGrid() {
 ]
   return (
     <div className="ag-theme-alpine">
-      <AgGridReact rowData={loans} columnDefs={columnDefs} immutableData>
+      <AgGridReact rowData={loans} columnDefs={columnDefs}>
       </AgGridReact>
     </div>
   );

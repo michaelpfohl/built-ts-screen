@@ -10,7 +10,7 @@ export default function BudgetGrid() {
   ]
   return (
     <div className="ag-theme-alpine">
-      <AgGridReact rowData={budget} columnDefs={columnDefs} immutableData>
+      <AgGridReact rowData={budget} columnDefs={columnDefs}>
       </AgGridReact>
     </div>
   );

@@ -7,15 +7,23 @@ export function CollateralForm() {
   const [value, setValue] = useState('');
   const dispatch = useAppDispatch();
 
+  const handleClick = (e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+    dispatch(createCollateral(name, Number(value)));
+    setName("");
+    setValue("");
+  }
+
   return (
   <div>
     <h3 className="form-header">Collateral</h3>
-    <form className="mb-3">
+    <form className="mb-3" onSubmit={(e) => handleClick(e)}>
       <input
         type="text"
         name="name"
         placeholder="Name"
         className="input-full-border"
+        value={name}
         onChange={(e) => setName(e.target.value)}
       />
       <input
@@ -23,9 +31,10 @@ export function CollateralForm() {
         name="value"
         placeholder="Value"
         className="input-no-left-border"
+        value={value}
         onChange={(e) => setValue(e.target.value)}
       />
-      <button onClick={() => dispatch(createCollateral(name, Number(value)))} type="button" className="submit-button">
+      <button type="submit" className="submit-button">
         Submit
       </button>
     </form>
