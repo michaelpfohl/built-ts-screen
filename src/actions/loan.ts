@@ -1,10 +1,11 @@
-export const createLoan = (principal: number, interest: number, term: number)  => {
+export const createLoan = (principal: number, interest: number, term: number, id: number)  => {
     return {
         type: "CREATE-LOAN",
         payload: {
             principal,
             interest,
-            term
+            term, 
+            id,
         }
     }
   }

@@ -6,6 +6,7 @@ interface Expense {
 interface Budget {
     projectName: string;
     totalBudget: number;
+    id: number;
     expenses?: Expense[];
 }
 

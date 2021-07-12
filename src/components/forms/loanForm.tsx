@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useAppDispatch } from '../../app/hooks';
 import { createLoan } from '../../actions/loan';
+import { AppState } from '../../reducers';
 
 export function LoanForm() {
   const [principal, setPrincipal] = useState('');
   const [term, setTerm] = useState('');
   const [interest, setInterest] = useState('');
   const dispatch = useAppDispatch();
+  const loans = useSelector((state: AppState) => state.loan.loans);
 
   const handleClick = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    dispatch(createLoan(Number(principal), Number(term), Number(interest)))
+    dispatch(createLoan(Number(principal), Number(term), Number(interest), loans.length + 1))
     setPrincipal("");
     setTerm("");
     setInterest("");
