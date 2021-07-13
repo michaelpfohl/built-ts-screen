@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useAppDispatch } from '../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { createLoan } from '../../actions/loan';
 import { AppState } from '../../reducers';
 
@@ -9,7 +8,7 @@ export function LoanForm() {
   const [term, setTerm] = useState('');
   const [interest, setInterest] = useState('');
   const dispatch = useAppDispatch();
-  const loans = useSelector((state: AppState) => state.loan.loans);
+  const loans = useAppSelector((state: AppState) => state.loan.loans);
 
   const handleClick = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();

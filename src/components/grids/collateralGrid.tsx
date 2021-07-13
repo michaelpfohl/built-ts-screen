@@ -1,9 +1,10 @@
 import { AgGridReact } from 'ag-grid-react';
-import { useSelector } from 'react-redux';
 import { AppState } from '../../reducers';
+import { useAppSelector }  from '../../app/hooks'
+
 
 export default function CollateralGrid() {
-  const collateral = useSelector(
+  const collateral = useAppSelector(
     (state: AppState) => state.collateral.collateral
   );
   const columnDefs = [

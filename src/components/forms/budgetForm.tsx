@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useAppDispatch } from '../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { createBudget } from '../../actions/budget';
 import { AppState } from '../../reducers';
 
@@ -8,7 +7,7 @@ export function BudgetForm() {
   const [projectName, setProjectName] = useState('');
   const [totalBudget, setTotalBudget] = useState('');
   const dispatch = useAppDispatch();
-  const budget = useSelector((state: AppState) => state.budget.budgets);
+  const budget = useAppSelector((state: AppState) => state.budget.budgets);
 
   const handleClick = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();

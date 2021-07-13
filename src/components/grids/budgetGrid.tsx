@@ -1,9 +1,9 @@
 import { AgGridReact } from 'ag-grid-react';
-import { useSelector } from 'react-redux';
 import { AppState } from '../../reducers';
+import { useAppSelector }  from '../../app/hooks'
 
 export default function BudgetGrid() {
-  const budget = useSelector((state: AppState) => state.budget.budgets);
+  const budget = useAppSelector((state: AppState) => state.budget.budgets);
   const columnDefs = [
       { field: "projectName", headerName: "Project Name", editable: true},
       { field: "totalBudget", headerName: "Total Budget", editable: true},

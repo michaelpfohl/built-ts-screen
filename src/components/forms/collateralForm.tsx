@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useAppDispatch } from '../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { createCollateral } from '../../actions/collateral';
 import { AppState } from '../../reducers';
 
@@ -8,7 +7,7 @@ export function CollateralForm() {
   const [name, setName] = useState('');
   const [value, setValue] = useState('');
   const dispatch = useAppDispatch();
-  const collateral = useSelector((state: AppState) => state.collateral.collateral);
+  const collateral = useAppSelector((state: AppState) => state.collateral.collateral);
 
   const handleClick = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
