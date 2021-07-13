@@ -8,3 +8,14 @@ export const createCollateral = (name: string, value: number, id: number)  => {
         }
     }
   }
+
+export const updateCollateral = (name: string, value: number, id: number)  => {
+    return {
+        type: "UPDATE-COLLATERAL",
+        payload: {
+            name,
+            value,
+            id,
+        }
+    }
+  }

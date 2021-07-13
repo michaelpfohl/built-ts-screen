@@ -11,6 +11,17 @@ const budgetReducer = (
         ...state,
         budgets: [...state.budgets, action.payload],
       };
+    case 'UPDATE-BUDGET':
+      const index = state.budgets.findIndex(
+        (budget: Budget) => budget.id === action.payload.id
+      );
+      const newArray: Budget[] = [...state.budgets];
+      newArray[index] = action.payload;
+
+      return {
+        ...state,
+        budgets: newArray,
+      };
     default:
       return state;
   }

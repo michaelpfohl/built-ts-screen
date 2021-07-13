@@ -11,6 +11,17 @@ const loanReducer = (
         ...state,
         loans: [...state.loans, action.payload],
       };
+    case 'UPDATE-LOAN':
+      const index = state.loans.findIndex(
+        (loan: Loan) => loan.id === action.payload.id
+      );
+      const newArray: Loan[] = [...state.loans];
+      newArray[index] = action.payload;
+
+      return {
+        ...state,
+        loans: newArray,
+      };
     default:
       return state;
   }
