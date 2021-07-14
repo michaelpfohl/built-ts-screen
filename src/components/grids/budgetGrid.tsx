@@ -14,7 +14,7 @@ export default function BudgetGrid() {
 
   const onCellValueChanged = (event: any) => {
     const data = event.data;
-    dispatch(updateBudget(data.projectName, data.totalValue, data.id));
+    dispatch(updateBudget(data.projectName, data.totalBudget, data.id));
   };
 
   return (
