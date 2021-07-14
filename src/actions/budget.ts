@@ -19,7 +19,7 @@ export const updateBudget = (
   id: number
 ) => {
   return {
-    type: 'UPDATE-COLLATERAL',
+    type: 'UPDATE-BUDGET',
     payload: {
       projectName,
       totalBudget,
