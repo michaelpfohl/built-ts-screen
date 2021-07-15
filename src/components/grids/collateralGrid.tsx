@@ -11,7 +11,7 @@ export default function CollateralGrid() {
   
   const columnDefs = [
     { field: 'name', headerName: 'Name', editable: true },
-    { field: 'value', headerName: 'value', editable: true },
+    { field: 'value', headerName: 'Value', editable: true },
   ];
   const dispatch = useAppDispatch();
 
