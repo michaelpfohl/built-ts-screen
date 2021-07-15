@@ -32,19 +32,19 @@ export function LoanForm() {
         />
         <input
           type="text"
-          name="term"
-          placeholder="Term (in months)"
-          className="input-no-left-border"
-          value={term}
-          onChange={(e) => setTerm(e.target.value)}
-        />
-        <input
-          type="text"
           name="interest"
           placeholder="Interest"
           className="input-no-left-border"
           value={interest}
           onChange={(e) => setInterest(e.target.value)}
+        />
+        <input
+          type="text"
+          name="term"
+          placeholder="Term (in months)"
+          className="input-no-left-border"
+          value={term}
+          onChange={(e) => setTerm(e.target.value)}
         />
         <button
           type="submit"
